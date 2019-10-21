@@ -20,7 +20,9 @@ class Waiter
  
  def best_tipper
    all_my_meals = Meal.all.select {|meal| meal.waiter == self}
-   all_my_meals.each{|my_meals| my_meals.tip}.max
+   all_my_meals.each do |my_meal| 
+     my_meal.tip
+  end.max
  end
  
   def self.all
