@@ -24,13 +24,21 @@ class Customer
     Meal.all.select {|meal| meal.customer == self}
  end
  
- def waiters
-   all_my_meals = Meal.all.select {|meal| meal.customer == self}
-   all_my_waiters = []
-   all_my_meals.each do |my_meal|
-     all_my_waiters << my_meal.waiter
-   end
-   all_my_waiters
- end
+ # def waiters
+#   all_my_meals = Meal.all.select {|meal| meal.customer == self}
+#   all_my_waiters = []
+#   all_my_meals.each do |my_meal|
+#     all_my_waiters << my_meal.waiter
+#   end
+#   all_my_waiters
+# end
+# def waiters
+#   all_my_meals = Meal.all.select {|meal| meal.customer == self}
+#   all_my_waiters = []
+#   all_my_meals.each do |my_meal|
+#     all_my_waiters << my_meal.waiter
+#   end
+#   all_my_waiters
+# end
 
 end
